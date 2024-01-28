@@ -1,4 +1,4 @@
-# railsSampleApp
+# ganba-server
 これは、ReactとRuby on railsでのアプリケーション開発に使用することのできるサンプルdoker構成です。
 
 これで構築できます。
