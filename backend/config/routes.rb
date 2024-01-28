@@ -13,4 +13,9 @@ Rails.application.routes.draw do
     post '/login/time', to: 'users#login_times_update'
   end
 
+  scope 'friend' do
+    post '/add', to: 'friends#add_friend'
+    post '/delete', to: 'friends#delete_friend'
+    get '/search/:myself', to:'frinends#search'
+  end
 end
