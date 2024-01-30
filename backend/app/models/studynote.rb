@@ -1,0 +1,2 @@
+class Studynote < ApplicationRecord
+end
