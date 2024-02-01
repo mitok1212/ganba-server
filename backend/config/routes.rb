@@ -27,8 +27,6 @@ Rails.application.routes.draw do
 
   scope 'studynote' do
     post '/add', to: 'studynotes#add_studynote'
-    post '/date', to: 'studynotes#date'
-    post '/time', to: 'studynotes#studytime'
-    post '/goal', to: 'studynotes#goal'
+    get '/show/:username', to: 'studynotes#show_studynote' 
   end
 end
