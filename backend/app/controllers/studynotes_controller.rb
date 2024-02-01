@@ -1,22 +1,13 @@
 class StudynotesController < ApplicationController
     def add_studynote
-        Studynote.create(username: params[:username])
+        Studynote.create(date: params[:date],studytime: params[:studytime],subject: params[:subject],username: params[:username],goal: params[:goal])
     end
-    def date 
+    def show_studynote
         studynote = Studynote.find_by(username: params[:username])
-    studynote.update(date: params[:date])
-    end
-    def studytime
-        studynote = Studynote.find_by(username: params[:username])
-        studynote.update(studytime: params[:studytime])
-    end
-    #def subjectcolor#一旦置いとく
-    #end
-    #def studycontent#教科選択式,selectメソッド？？？
-    #end
-    def goal
-        studynote = Studynote.find_by(username: params[:username])
-        studynote.goal = params[:goal]
-    end
-
+        if studynote != nil
+          render json: {message: "succeed",data: studynote}, status: :ok
+        else
+          render json: {message: "failed"}, status: :bad_request
+        end
+      end
 end
