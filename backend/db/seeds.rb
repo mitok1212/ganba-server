@@ -7,7 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 User.create(name: "aaa", password: "password", friend:"friend")
-
+Friend.create(friendme: "Michael",friendyou: "John")
+Friend.create(friendme: "John",friendyou: "Michael")
+Reaction.create(myname: "Emily",yourname: "Mary")
 
 #t.string :name, :null => false
 #t.string :password, :null => false
