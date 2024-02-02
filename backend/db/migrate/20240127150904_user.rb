@@ -6,7 +6,7 @@ class User < ActiveRecord::Migration[7.0]
       t.string :friend, :null => false
       t.integer :login, :null => false, :default => 0
       t.datetime :login_time 
-      t.text :goal ,:null => false
+      t.text :goal
       t.timestamps
     end
   end
