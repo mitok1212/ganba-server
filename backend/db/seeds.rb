@@ -7,6 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 User.create(name: "aaa", password: "password", friend:"friend")
+User.create(name: "John", password: "password1", friend:"friend1")
+User.create(name: "Michael", password: "password2", friend:"friend2")
 Friend.create(friendme: "Michael",friendyou: "John")
 Friend.create(friendme: "John",friendyou: "Michael")
 Reaction.create(myname: "Emily",yourname: "Mary")

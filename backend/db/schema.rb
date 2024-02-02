@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema[7.0].define(version: 2024_01_28_140015) do
-  create_table "frineds", charset: "utf8mb4", force: :cascade do |t|
+  create_table "friends", charset: "utf8mb4", force: :cascade do |t|
     t.string "friendme", null: false
     t.string "friendyou", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reactions", charset: "utf8mb4", force: :cascade do |t|
+    t.string "myname", null: false
+    t.string "yourname", null: false
+    t.integer "kind", default: 0, null: false
+    t.integer "kind_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -22,10 +30,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_28_140015) do
   create_table "studynotes", charset: "utf8mb4", force: :cascade do |t|
     t.date "date", null: false
     t.time "studytime", null: false
-    t.string "subject", null: false
+    t.integer "subject", null: false
     t.string "username", null: false
     t.text "goal", null: false
-    t.text "studycontent", null: false
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
