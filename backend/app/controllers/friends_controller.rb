@@ -19,14 +19,14 @@ class FriendsController < ApplicationController
     #.where(friendme: params[:myself])
 
     #friendとreactionでkind
-    reactions = Friend.joins(:reactions)
-    .select('reactions.kind')
-    .where(yourname: params[:myself])
+    #reactions = Friend.joins(:reactions)
+    #.select('reactions.kind')
+    #.where(yourname: params[:myself])
 
     #friendとuserでlogin_time
-    times = Friend.joins(:user)
-    .select('users.login_time')
-    .where(name: params[:myself])
+    #times = Friend.joins(:user)
+    #.select('users.login_time')
+    #.where(name: params[:myself])
 
     friends = Friend.where(friendme: params[:myself])
     render json: {message: "succeed", friend: users}, status: :ok
