@@ -22,7 +22,12 @@ class UsersController < ApplicationController
   def login_status_update
     #loginの数値を更新する
     user = User.find_by(name: params[:name])
-    user.update(login: params[:login])
+    if user != nil
+      render json: {message: "succeed"}, status: :ok
+      user.update(login: params[:login])
+    else
+      render json: {message: "failed"}, status: :bad_request
+    end
   end
 
   def login_times_update
