@@ -14,6 +14,7 @@ Friend.create(friendme: "Michael",friendyou: "John")
 Friend.create(friendme: "John",friendyou: "Michael")
 
 Reaction.create(myname: "Emily",yourname: "Mary")
+Reaction.create(myname: "John",yourname: "Michael")
 
 #t.string :name, :null => false
 #t.string :password, :null => false
