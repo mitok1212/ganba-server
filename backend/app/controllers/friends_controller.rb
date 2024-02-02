@@ -29,7 +29,7 @@ class FriendsController < ApplicationController
           {
             friend_name: friend.friendyou,
             user_login: user.login||0,
-            goal: user.goal||"がんばれ！！"
+            goal: user.goal||"がんばれ！！",
             latest_reaction: reaction&.kind||0          
           }
         end
