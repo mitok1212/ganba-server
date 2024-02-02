@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   scope 'friend' do
     post '/add', to: 'friends#add_friend'
     post '/delete', to: 'friends#delete_friend'
-    get '/search/:myself', to:'frinends#search'
+    get '/search/:myself', to:'friends#search'
   end
 
   scope 'reaction' do
