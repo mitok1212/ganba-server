@@ -4,7 +4,7 @@ class FriendsController < ApplicationController
     if Friend.where(friendme:params[:myself]).where(friendyou:params[:yourself]).empty?
       Friend.create(friendme: params[:myself], friendyou: params[:yourself])
       Friend.create(friendme: params[:yourself], friendyou: params[:myself])
-      render json: { message: "succeed", friend_data: friend_data }, status: :ok
+      render json: { message: "succeed"}, status: :ok
     else
       render json: { message: "failed" }, status: :bad_request
     end
